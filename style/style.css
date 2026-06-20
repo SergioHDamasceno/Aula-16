@@ -1,0 +1,14 @@
+ul {
+    list-style: none; /* remove o ponto padrão */
+    counter-reset: contador; /* cria um contador */
+    padding: 0;
+}
+ul li {
+    counter-increment: contador; /* incrementa o contador */
+    margin: 5px 0;
+}
+ul li::before {
+    content: counter(contador) ". "; /* exibe o número */
+    font-weight: bold;
+    color: blue;
+}
